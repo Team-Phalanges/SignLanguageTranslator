@@ -4,6 +4,13 @@ let video;
 let loss;
 let images=0;
 
+const modelParams = {
+  flipHorizontal: true, // flip e.g for video
+  maxNumBoxes: 1, // maximum number of boxes to detect
+  iouThreshold: 0.5, // ioU threshold for non-max suppression
+  scoreThreshold: 0.725 // confidence threshold for predictions.
+};
+
 function setup() {
   noCanvas();
   // Create a video element
