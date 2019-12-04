@@ -127,29 +127,114 @@ function setupButtons() {
       document.getElementById('img-current-letter').src = "./img/Sign_language_I.svg";
       document.getElementById('current-letter-text').innerHTML = "I";
       document.getElementById("letter").innerHTML = "i";
+      imageIndex++;
+    }
+    else if (imageIndex == 9) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_J.svg";
+      document.getElementById('current-letter-text').innerHTML = "J";
+      document.getElementById("letter").innerHTML = "j";
+      imageIndex++;
+    }
+    else if (imageIndex == 10) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_K.svg";
+      document.getElementById('current-letter-text').innerHTML = "K";
+      document.getElementById("letter").innerHTML = "k";
+      imageIndex++;
+    }
+    else if (imageIndex == 11) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_L.svg";
+      document.getElementById('current-letter-text').innerHTML = "L";
+      document.getElementById("letter").innerHTML = "l";
+      imageIndex++;
+    }
+    else if (imageIndex == 12) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_M.svg";
+      document.getElementById('current-letter-text').innerHTML = "M";
+      document.getElementById("letter").innerHTML = "m";
+      imageIndex++;
+    }
+    else if (imageIndex == 13) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_N.svg";
+      document.getElementById('current-letter-text').innerHTML = "N";
+      document.getElementById("letter").innerHTML = "n";
+      imageIndex++;
+    }
+    else if (imageIndex == 14) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_O.svg";
+      document.getElementById('current-letter-text').innerHTML = "O";
+      document.getElementById("letter").innerHTML = "o";
+      imageIndex++;
+    }
+    else if (imageIndex == 15) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_P.svg";
+      document.getElementById('current-letter-text').innerHTML = "P";
+      document.getElementById("letter").innerHTML = "p";
+      imageIndex++;
+    }
+    else if (imageIndex == 16) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_Q.svg";
+      document.getElementById('current-letter-text').innerHTML = "Q";
+      document.getElementById("letter").innerHTML = "q";
+      imageIndex++;
+    }
+    else if (imageIndex == 17) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_R.svg";
+      document.getElementById('current-letter-text').innerHTML = "R";
+      document.getElementById("letter").innerHTML = "r";
+      imageIndex++;
+    }
+    else if (imageIndex == 18) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_S.svg";
+      document.getElementById('current-letter-text').innerHTML = "S";
+      document.getElementById("letter").innerHTML = "s";
+      imageIndex++;
+    }
+    else if (imageIndex == 19) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_T.svg";
+      document.getElementById('current-letter-text').innerHTML = "T";
+      document.getElementById("letter").innerHTML = "t";
+      imageIndex++;
+    }
+    else if (imageIndex == 20) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_U.svg";
+      document.getElementById('current-letter-text').innerHTML = "U";
+      document.getElementById("letter").innerHTML = "u";
+      imageIndex++;
+    }
+    else if (imageIndex == 21) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_V.svg";
+      document.getElementById('current-letter-text').innerHTML = "V";
+      document.getElementById("letter").innerHTML = "v";
+      imageIndex++;
+    }
+    else if (imageIndex == 22) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_W.svg";
+      document.getElementById('current-letter-text').innerHTML = "W";
+      document.getElementById("letter").innerHTML = "w";
+      imageIndex++;
+    }
+    else if (imageIndex == 23) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_X.svg";
+      document.getElementById('current-letter-text').innerHTML = "X";
+      document.getElementById("letter").innerHTML = "x";
+      imageIndex++;
+    }
+    else if (imageIndex == 24) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_Y.svg";
+      document.getElementById('current-letter-text').innerHTML = "Y";
+      document.getElementById("letter").innerHTML = "y";
+      imageIndex++;
+    }
+    else if (imageIndex == 25) {
+      document.getElementById('img-current-letter').src = "./img/Sign_language_Z.svg";
+      document.getElementById('current-letter-text').innerHTML = "Z";
+      document.getElementById("letter").innerHTML = "z";
       imageIndex = 0;
     }
 
   });
 
   buttontest = select('#testbtn')
-
-  // Test 1
-
-  // PURPOSE:
-  // Test the button element on the UI presents the user with the correct
-  // feedback in regards to there input from the webcam and test results
-  // to match with a alphabet letter.
-
-  // SETUP:
-  // None needed.
-
-  // EXPECTED OUTPUTS:
-  // Results of test failure or pass written to the console.
-
-  // Testing requirements covered for buttontest.mousePressed
-  // 1. Results of test displayed correctly to the user in the 'result' element
-  // 2. UI updated with the correct test results in the 'R' element
 
   function testForButtonTestMousePressed() {
 
@@ -181,23 +266,6 @@ function setupButtons() {
 
 
   buttonsubmit = select('#submit')
-
-
-  // Test 2
-
-  // PURPOSE:
-  // Test if the user is presented with the correct image for the letter of the alphabet
-  // and corresponding label for the letter on the UI.
-
-  // SETUP:
-  // None needed.
-
-  // EXPECTED OUTPUTS:
-  // Results of test failure or pass written to the console.
-
-  // Testing requirements for buttonsubmit.mousePressed
-  // 1. Correct image loaded into html element 'img-current-letter'
-  // 2. Correct label for image is displayed in the 'current-letter' element
 
   function testButtonSubmitMousePressed() {
 
@@ -324,9 +392,6 @@ function setupButtons() {
     });
   });
 }
-
-// Testing requirement for gotResults
-// 1. 
 
 
 // Show the results
