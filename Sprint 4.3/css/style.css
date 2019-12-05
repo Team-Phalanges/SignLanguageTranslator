@@ -1,0 +1,164 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Global */
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+#team-name-wrap{
+  display: flex;
+  flex-direction: row;  
+}
+
+/* Header */
+header{
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 10px;
+  min-height: 50px;
+  border-bottom: #e8491d 3px solid;
+}
+
+/* Controls wrapper*/
+#controls-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}
+
+/* Controls*/
+#controls-one{
+  display: grid;
+  align-content: space-evenly;
+}
+
+/* Try Button*/
+#try-button{
+  margin: 1px;
+}
+
+/* Test Button*/
+#test-button{
+  margin: 10px;
+}
+
+/* Controls*/
+#controls-two{
+  display: grid;
+  align-content: space-evenly;
+}
+
+/* Loss information*/
+#loss{
+  margin: 10px;
+}
+
+/* Controls*/
+#controls-three{
+
+  margin-bottom: 0px;
+  margin-left: 0px;
+
+}
+
+/* Container-learn */
+#container-learn{
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+/* Current-Letter */
+#current-letter{
+  padding: 25px;
+  flex-grow: .2;
+  display: inline-block
+}
+
+#img-current-letter{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* Web-camera */
+#video-wrap{
+  padding: 25px;
+  flex-grow: .8;
+  display: inline-block;
+
+}
+
+#user-feedback-container{
+  padding-top: 50px;
+
+}
+
+#canvas{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+#video {
+  display: none;
+}
+
+.row-controls{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
