@@ -8,6 +8,7 @@
 - Professor - Dr. Sandeep Kuttal
 
 # Sign Language Teacher
+This is a group repository for The University of Tulsa Senior Software Project course.
 The purpose of this project is to conceptualize, design, and manage a unique and useful application. Throughout this project, we will utilize an Agile SDLC with bi-weekly scrum meetings and 4-6 week sprint periods.
 
 The purpose behind this project is to create a tool that utilizes computer vision tools to teach students American Sign Language. The project offers convenience and economic value to both students and prospective instructors of ASL with its portability and automatic feedback, which allows users to practice and learn without the presence of an instructor.
