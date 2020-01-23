@@ -1,5 +1,23 @@
 # SignLanguageTranslator
-Current TODO:
-1.) In Training, add ability to train a model on any label.
-2.) In testing, add ability to load the custom model.json file to classify hand signs.
-3.) Add directory for user interface code.
+This is a group project for the Senior Software Project class at the University of Tulsa.
+
+# Team Members:
+Matthew Mackey - Project manager and back-end development.
+Garrett Smith - Front-end development and UI designer.
+Sean Waltermire - Testing and front-end development.
+Yifan Yang - Testing and back-end development.
+Zhiewei Lin - Testing and back-end development.
+Jake Ivy - Testing and back-end development.
+
+# Sign Language Teacher
+The purpose of this project is to conceptualize, design, and manage a unique and useful application. Throughout this project, we will utilize an Agile SDLC with bi-weekly scrum meetings and 4-6 week sprint periods.
+
+The purpose behind this project is to create a tool that utilizes computer vision tools to teach students American Sign Language. The project offers convenience and economic value to both students and prospective instructors of ASL with its portability and automatic feedback, which allows users to practice and learn without the presence of an instructor.
+
+# Features In-Progress
+Web-based application for portability.
+Homepage with introductory information.
+Training page where the actual application interaction takes place.
+Automatic gesture recognition and feedback so the user knows if they are correct.
+Examples of the gestures to be mimicked by the user.
+Multiple language support.
