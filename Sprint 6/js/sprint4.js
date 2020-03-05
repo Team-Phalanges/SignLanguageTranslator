@@ -26,7 +26,7 @@ function setup() {
 // A function to be called when the model has been loaded
 function modelReady() {
   //select('#modelStatus').html('Base Model (MobileNet) Loaded!');
-  classifier.load('./model/D/model.json', function () {
+  classifier.load('./model/A/model.json', function () {
     select('#modelStatus').html('Custom Model Loaded!');
   });
 }
