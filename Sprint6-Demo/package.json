@@ -1,0 +1,12 @@
+{
+  "name": "Sprint4.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sprint4.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "node-sass --watch scss -o css"
+  },
+  "author": "",
+  "license": "ISC"
+}
