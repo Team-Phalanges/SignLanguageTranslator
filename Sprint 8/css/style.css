@@ -1,0 +1,235 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  /*background-color: #f4f4f4; */
+}
+
+/* Global */
+.container{
+  width: 95%;
+  height: 50 px;
+  margin: auto;
+}
+
+/* Outer grid for index page */
+.index-grid {
+  display: grid;  
+  grid-template-columns: 100%;
+  justify-content: center;
+}
+
+/* Grid for instructions */
+.instructions-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;  
+}
+.instructions-grid-item {
+  justify-content: center;
+  text-align: center;
+}
+.instructions-circle {
+  display: inline-block; 
+  width:100px;
+  height:100px;
+  border-radius:50px;
+  font-size:20px;
+  color:#fff;
+  line-height:100px;
+  text-align:center;
+  background: #35424a;
+}
+.instructions {
+  border-style: solid;
+  border-width: 3 px;
+  padding: 10px;
+  margin: 10px;  
+  border-radius:10px;
+}
+
+/* Grid for the header on the language page */
+.language-header-grid {
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+  grid-column-gap: 20px;
+}
+.home-circle {
+  display: table-cell; 
+  width:70px;
+  height:70px;
+  border-radius:35px;
+  vertical-align: middle;  
+  background: #fff;
+}
+.home-link :hover {
+  background-color: #e8491d;
+}
+
+/* Grid for languages on index page */
+.languages-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-evenly;
+}
+
+/* Grid items inside of the grid for languages on index page */
+.language-grid-item :hover {
+  background: #ccc;
+}
+.margin-flags {
+  padding: 20px;
+}
+
+/* Text style for links on the index page */
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+/* Tutor image on index page */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+/* "Get statered by choosing a language" element on index page */
+#get-started{
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  min-height: 50px;
+  border-top: #e8491d 3px solid;
+  border-bottom: #e8491d 3px solid;
+}
+
+#team-name-wrap{
+  display: flex;
+  flex-direction: row;  
+}
+
+/* Header */
+header{
+  background: #35424a;
+  color: #ffffff;
+  padding-top: 10px;
+  min-height: 50px;
+  border-bottom: #e8491d 3px solid;
+}
+
+/* Controls wrapper*/
+#controls-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+}
+
+/* Controls*/
+#controls-one{
+  display: grid;  
+}
+
+/* Try Button*/
+#try-button{
+  margin: 1px;
+}
+
+/* Test Button*/
+#test-button{
+  margin: 10px;
+}
+
+/* Controls*/
+#controls-two{
+  display: grid;
+  align-content: space-evenly;
+}
+
+/* Loss information*/
+#loss{
+  margin: 10px;
+}
+
+/* Controls*/
+#controls-three{
+  display: grid;
+  align-content: space-evenly;
+}
+
+/* Container-learn */
+#container-learn{
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
+/* Current-Letter */
+#current-letter{
+  padding: 25px;
+  flex-grow: .2;
+  display: inline-block
+}
+
+#img-current-letter{
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* Web-camera */
+#video-wrap{
+  padding: 25px;
+  flex-grow: .8;
+  display: inline-block
+}
+
+#user-feedback-container{
+  padding-top: 50px;
+}
+
+#canvas{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+#video {
+  display: none;
+}
+
+.row-controls{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.footer{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.5rem;
+  color: #ffffff;
+  background-color: #e8491d;
+  text-align: center;
+}
+
+
