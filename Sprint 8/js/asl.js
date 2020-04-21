@@ -5,7 +5,7 @@ let video;
 let loss;
 let images = 0;
 let imageIndex = 1;
-
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
 
 
 function setup() {
@@ -38,6 +38,13 @@ function videoReady() {
 
 // Classify the current frame.
 function classify() {
+  var but_pred = document.getElementById("buttonPredict");
+
+  //Change the button look on press for visual feedback
+  but_pred.className = "button_pressed"
+  but_pred.textContent = "Running!";
+
+  //Call classifier
   classifier.classify(gotResults);
 }
 
@@ -46,190 +53,35 @@ function classify() {
 function setupButtons() {
   buttontry = select('#trybtn')
   buttontry.mousePressed(function () {
+    var cur_letter = alphabet[imageIndex];
+      console.log("./model/asl/" + cur_letter + "/model.json")
+      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_" + cur_letter + ".svg";
+      document.getElementById('current-letter-text').innerHTML = cur_letter;
+      document.getElementById("letter").innerHTML = cur_letter.toLowerCase();
+      classifier.load("./model/asl/" + cur_letter + "/model.json");
+      imageIndex++;
 
-    if (imageIndex == 0) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_A.svg";
-      document.getElementById('current-letter').innerHTML = "A";
-      document.getElementById("letter").innerHTML = "a";
-      classifier.load('./model/asl/A/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 1) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_B.svg";
-      document.getElementById('current-letter-text').innerHTML = "B";
-      document.getElementById("letter").innerHTML = "b";
-      classifier.load('./model/asl/B/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 2) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_C.svg";
-      document.getElementById('current-letter-text').innerHTML = "C";
-      document.getElementById("letter").innerHTML = "c";
-      classifier.load('./model/asl/C/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 3) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_D.svg";
-      document.getElementById('current-letter-text').innerHTML = "D";
-      document.getElementById("letter").innerHTML = "d";
-      classifier.load('./model/asl/D/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 4) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_E.svg";
-      document.getElementById('current-letter-text').innerHTML = "E";
-      document.getElementById("letter").innerHTML = "e";
-      classifier.load('./model/asl/E/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 5) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_F.svg";
-      document.getElementById('current-letter-text').innerHTML = "F";
-      document.getElementById("letter").innerHTML = "f";
-      classifier.load('./model/asl/F/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 6) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_G.svg";
-      document.getElementById('current-letter-text').innerHTML = "G";
-      document.getElementById("letter").innerHTML = "g";
-      classifier.load('./model/asl/G/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 7) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_H.svg";
-      document.getElementById('current-letter-text').innerHTML = "H";
-      document.getElementById("letter").innerHTML = "h";
-      classifier.load('./model/asl/H/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 8) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_I.svg";
-      document.getElementById('current-letter-text').innerHTML = "I";
-      document.getElementById("letter").innerHTML = "i";
-      classifier.load('./model/asl/I/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 9) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_J.svg";
-      document.getElementById('current-letter-text').innerHTML = "J";
-      document.getElementById("letter").innerHTML = "j";
-      classifier.load('./model/asl/J/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 10) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_K.svg";
-      document.getElementById('current-letter-text').innerHTML = "K";
-      document.getElementById("letter").innerHTML = "k";
-      classifier.load('./model/asl/K/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 11) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_L.svg";
-      document.getElementById('current-letter-text').innerHTML = "L";
-      document.getElementById("letter").innerHTML = "l";
-      classifier.load('./model/asl/L/model.json');
-      imageIndex++
-    }
-    else if (imageIndex == 12) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_M.svg";
-      document.getElementById('current-letter-text').innerHTML = "M";
-      document.getElementById("letter").innerHTML = "m";
-      classifier.load('./model/asl/M/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 13) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_N.svg";
-      document.getElementById('current-letter-text').innerHTML = "N";
-      document.getElementById("letter").innerHTML = "n";
-      classifier.load('./model/asl/N/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 14) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_O.svg";
-      document.getElementById('current-letter-text').innerHTML = "O";
-      document.getElementById("letter").innerHTML = "o";
-      classifier.load('./model/asl/O/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 15) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_P.svg";
-      document.getElementById('current-letter-text').innerHTML = "P";
-      document.getElementById("letter").innerHTML = "p";
-      classifier.load('./model/asl/P/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 16) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_Q.svg";
-      document.getElementById('current-letter-text').innerHTML = "Q";
-      document.getElementById("letter").innerHTML = "q";
-      classifier.load('./model/asl/Q/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 17) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_R.svg";
-      document.getElementById('current-letter-text').innerHTML = "R";
-      document.getElementById("letter").innerHTML = "r";
-      classifier.load('./model/asl/R/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 18) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_S.svg";
-      document.getElementById('current-letter-text').innerHTML = "S";
-      document.getElementById("letter").innerHTML = "s";
-      classifier.load('./model/asl/S/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 19) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_T.svg";
-      document.getElementById('current-letter-text').innerHTML = "T";
-      document.getElementById("letter").innerHTML = "t";
-      classifier.load('./model/asl/T/model.json');
-      imageIndex++;
-    }    
-    else if (imageIndex == 20) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_U.svg";
-      document.getElementById('current-letter-text').innerHTML = "U";
-      document.getElementById("letter").innerHTML = "u";
-      classifier.load('./model/asl/U/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 21) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_V.svg";
-      document.getElementById('current-letter-text').innerHTML = "V";
-      document.getElementById("letter").innerHTML = "v";
-      classifier.load('./model/asl/V/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 22) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_W.svg";
-      document.getElementById('current-letter-text').innerHTML = "W";
-      document.getElementById("letter").innerHTML = "w";
-      classifier.load('./model/asl/W/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 23) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_X.svg";
-      document.getElementById('current-letter-text').innerHTML = "X";
-      document.getElementById("letter").innerHTML = "x";
-      classifier.load('./model/asl/X/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 24) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_Y.svg";
-      document.getElementById('current-letter-text').innerHTML = "Y";
-      document.getElementById("letter").innerHTML = "y";
-      classifier.load('./model/asl/Y/model.json');
-      imageIndex++;
-    }
-    else if (imageIndex == 25) {
-      document.getElementById('img-current-letter').src = "./imgASL/Sign_language_Z.svg";
-      document.getElementById('current-letter-text').innerHTML = "Z";
-      document.getElementById("letter").innerHTML = "z";
-      classifier.load('./model/asl/Z/model.json');
-      imageIndex = 0;
-    }
+      setTimeout(checkFun, 1000);
+      function checkFun(){
+          var results = document.getElementById('result').innerHTML;
+          var R= document.getElementById('current-letter-text').innerHTML;
+          var sound= document.getElementById("checkSound")
 
+          //Changed for demo*********
+          if(R=='a'){
+            swal({title: 'GOOD JOB!', 
+            text: 'You were correct!', 
+            icon: 'success',
+            button: 'Continue'});
+            n=n+1
+          }else{
+            swal({title: "SORRY!", 
+            text:"Your sign was incorrect.", 
+            icon:"error",
+            button: 'Continue'});
+            n=n-1
+          }
+      }
   });
 
 
@@ -248,6 +100,7 @@ function setupButtons() {
     var c = document.getElementById("value").value;
     document.getElementById("input").innerHTML = c;
     images = 0;
+    var cur_letter = alphabet
 
     if (c = "a") {
       document.getElementById('img-current-letter').src = "./imgASL/Sign_language_A.svg";
